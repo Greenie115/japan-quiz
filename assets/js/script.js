@@ -11,7 +11,7 @@ var hsInitials = document.getElementById("initials");
 var hsButton = document.getElementById("submit");
 //---------- end ----------
 
-questionKeys = Object.values(quizQuestions[0])
+questionValues = Object.values(quizQuestions[1])
 
 //timer variable to hold starting time
 var timer = 60;
@@ -34,9 +34,9 @@ startButton.addEventListener("click", function countdown(){
 
 //loop for creating each answers and questions li
 
-for (var i = 0; i < quizQuestions.length; i++){
+for (var i = 0; i < questionValues.length; i++){
   var liEl = document.createElement("li")
   var attachLi = choices.append(liEl)
-  liEl.textContent = questionKeys[i]
+  liEl.textContent = questionValues[i]
 }
 
