@@ -9,4 +9,19 @@ var endScreen = document.getElementById("end-screen");
 var finalScore = document.getElementById("final-score");
 var hsInitials = document.getElementById("initials");
 var hsButton = document.getElementById("submit");
+//---------- end ----------
 
+
+//timer variable to hold starting time
+var timer = 60;
+//--- end ---
+
+//function to count down the timer 
+function countdown(){
+  var timerInterval = setInterval(function(){
+        timer--;
+        console.log(timer)
+    }, 1000);
+} 
+
+countdown()
