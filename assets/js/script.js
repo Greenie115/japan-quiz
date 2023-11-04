@@ -13,17 +13,18 @@ var hsButton = document.getElementById("submit");
 
 
 //timer variable to hold starting time
-var timer = 60;
+var timer = 5;
 //--- end ---
 
 //function to count down the timer 
 function countdown(){
-  
   var timerInterval = setInterval(function(){
         timer--;
         timeCount.textContent = timer
+      if(timer <= 0){
+        clearInterval(timerInterval)
+      }
     }, 1000);
 } 
 
-
-countdown();
+startButton.addEventListener("click", countdown())  
