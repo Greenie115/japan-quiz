@@ -29,6 +29,10 @@ function loadQuestions(){
   choices.addEventListener("click", function(){
     increment ++
     questionTitle.textContent = questionTitleValue[increment]
+    if(increment > 4){ 
+      endScreen.setAttribute("class", "show") &&
+      questionsMain.setAttribute("class", "hide")
+    };
   })}
 
 //event listener on the start button
