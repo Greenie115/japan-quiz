@@ -11,12 +11,25 @@ var hsInitials = document.getElementById("initials");
 var hsButton = document.getElementById("submit");
 //---------- end ----------
 
-questionValues = Object.values(quizQuestions[1])
-questionTitleValue = Object.values(quizQuestions[0])
+var increment = 0
+var questionValues = Object.values(quizQuestions[1])
+var questionTitleValue = Object.values(quizQuestions[0])
+var changeQuestion = questionTitle.textContent = questionTitleValue[increment]
 
 //timer variable to hold starting time
 var timer = 60;
 //--- end ---
+
+function loadQuestions(){
+  for (var i = 0; i < questionValues.length; i++){
+    var liEl = document.createElement("button")
+    choices.append(liEl)
+    liEl.textContent = questionValues[i]
+  }
+  choices.addEventListener("click", function(){
+    increment ++
+    questionTitle.textContent = questionTitleValue[increment]
+  })}
 
 //event listener on the start button
 startButton.addEventListener("click", function countdown(){
@@ -31,16 +44,11 @@ startButton.addEventListener("click", function countdown(){
         clearInterval(timerInterval)
       }
     }, 1000);
+    loadQuestions();
 }) //----- end -----
 
-//loop for creating each answers and questions li
+//loop for creating each answers and questions button
 
-for (var i = 0; i < questionValues.length; i++){
-  var liEl = document.createElement("button")
-  var attachLi = choices.append(liEl)
-  liEl.textContent = questionValues[i]
-}
 
-function addQuestionTitle(){
 
-}
+
