@@ -18,10 +18,12 @@ var timer = 60;
 
 //function to count down the timer 
 function countdown(){
+  
   var timerInterval = setInterval(function(){
         timer--;
-        console.log(timer)
+        timeCount.textContent = timer
     }, 1000);
 } 
 
-countdown()
+
+countdown();
