@@ -31,4 +31,11 @@ startButton.addEventListener("click", function countdown(){
     }, 1000);
 }) //----- end -----
 
-//display the first question once the start button is pressed 
+//loop for creating each answers and questions li
+
+for (var i = 0; i < quizQuestions.length; i++){
+  var liEl = document.createElement("li")
+  choices.append(liEl)
+}
+
+console.log(choices)
