@@ -1,36 +1,39 @@
 //array of objects containing the questions
 var quizQuestions = [
-  
-  firstQuestion =  {
-        question: "what is ...",
+    
+    questions = {
+        questionOne: "What is the capital of Japan",
+        questionTwo: "Where is...",
+        questionThree: "How many...",
+        questionFour: "Is there...",
+        questionFive: "Why does..."
+    },
+
+  firstChoices =  {
         option1: "answer 1",
         answer: "This is the answer",
         option2: "answer 3",
         option3: "answer 4"
     },
-    secondQuestion = {
-        question: "where does...",
+    secondChoices = {
         answer: "Tokyo",
         option2: "answer 2",
         option3: "answer 3",
         option4: "answer 4"
     },
-    thirdQuestion = {
-        question: "where does...",
+    thirdChoices = {
         answer: "Tokyo",
         option2: "answer 2",
         option3: "answer 3",
         option4: "answer 4"
     },
-    fourthQuestion = {
-        question: "where does...",
+    fourthChoices = {
         answer: "Tokyo",
         option2: "answer 2",
         option3: "answer 3",
         option4: "answer 4"
     },
-    fifthQuestion = {
-        question: "where does...",
+    fifthChoices = {
         answer: "Tokyo",
         option2: "answer 2",
         option3: "answer 3",
