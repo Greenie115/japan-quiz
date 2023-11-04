@@ -13,17 +13,22 @@ var hsButton = document.getElementById("submit");
 
 
 //timer variable to hold starting time
-var timer = 5;
+var timer = 60;
 //--- end ---
 
-//function to count down the timer 
+//event listener on the start button
 startButton.addEventListener("click", function countdown(){
+  //function counting down the timer once button is clicked 
+  startScreen.setAttribute("class", "hide")
+  questionsMain.setAttribute("class", "show")
   var timerInterval = setInterval(function(){
         timer--;
         timeCount.textContent = timer
+      //error handler to stop count at 0  
       if(timer <= 0){
         clearInterval(timerInterval)
       }
     }, 1000);
-}) 
+}) //----- end -----
 
+//display the first question once the start button is pressed 
