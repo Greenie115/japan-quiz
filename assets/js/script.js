@@ -17,7 +17,7 @@ var timer = 5;
 //--- end ---
 
 //function to count down the timer 
-function countdown(){
+startButton.addEventListener("click", function countdown(){
   var timerInterval = setInterval(function(){
         timer--;
         timeCount.textContent = timer
@@ -25,6 +25,5 @@ function countdown(){
         clearInterval(timerInterval)
       }
     }, 1000);
-} 
+}) 
 
-startButton.addEventListener("click", countdown())  
