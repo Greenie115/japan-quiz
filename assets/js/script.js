@@ -22,7 +22,7 @@ var timer = 5;
 
 function loadQuestions(){
   for (var i = 0; i < questionValues.length; i++){
-      var liEl = document.createElement("li")
+      var liEl = document.createElement("button")
       choicesLi.append(liEl)
       liEl.textContent = questionValues[i]
       liEl.classList.add("choicesLi")
