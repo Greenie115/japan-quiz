@@ -15,8 +15,6 @@ var increment = 0
 var questionValues = Object.values(quizQuestions[1])
 var questionTitleValue = Object.values(quizQuestions[0])
 var changeQuestion = questionTitle.textContent = questionTitleValue[increment]
-// var answers = 
-
 
 //timer variable to hold starting time
 var timer = 5;
@@ -51,7 +49,6 @@ startButton.addEventListener("click", function countdown(){
     choicesLi.setAttribute("class", "hide")
     questionTitle.setAttribute("class", "hide")
     finalScore.textContent = timer
-
   }
   }, 1000)
   loadQuestions();
