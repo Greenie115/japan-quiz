@@ -12,8 +12,8 @@ var hsButton = document.getElementById("submit");
 //---------- end ----------
 
 var increment = 0
-var 
-// var questionTitleValue = Object.values(quizQuestions[0])
+var choicesLength = quizQuestions.question1.choices.length
+
 // var changeQuestion = questionTitle.textContent = questionTitleValue[increment]
 
 //timer variable to hold starting time
@@ -21,42 +21,40 @@ var timer = 5;
 //--- end ---
 
 function loadQuestions(){
-  for (var i = 0; i < quizQuestions.question1.choices.length; i++){
-      var liEl = document.createElement("button")
-      choicesLi.append(liEl)
-      liEl.textContent = quizQuestions[i].question + [i+1].question
-      liEl.classList.add("choicesLi")
+  for (var i = 0; i < choicesLength; i++){
+      var liBtn = document.createElement("button")
+      choicesLi.append(liBtn)
+      liBtn.classList.add("choicesLi")
+      liBtn.textContent = quizQuestions[i].choices
     }
 };
 
 // event listener on the start button
-startButton.addEventListener("click", function loadQuestions(){
+startButton.addEventListener("click", function(){
     startScreen.setAttribute("class", "hide")
     questionsMain.setAttribute("class", "show")
     choicesLi.setAttribute("class", "show")
-  //   choicesLi.addEventListener("click", function(){
-  //   increment ++
-  //   questionTitle.textContent = questionTitleValue[increment]
-  //   })
-  // //function counting down the timer once button is clicked 
-  // var timerInterval = setInterval(function(){
-  //   timer--;
-  //   timeCount.textContent = timer
-  // //error handler to stop count at 0  
-  // if(timer <= 0 || increment > 4){
-  //   clearInterval(timerInterval)
-  //   endScreen.setAttribute("class", "show")
-  //   choicesLi.setAttribute("class", "hide")
-  //   questionTitle.setAttribute("class", "hide")
-  //   finalScore.textContent = timer
-  // }
-  // }, 1000)
-  // loadQuestions();
+    choicesLi.addEventListener("click", function(){
+    increment ++
+    questionTitle.textContent = questionsArray[increment]
+    choicesLi.textContent = quizQuestions.choices[increment]
+    })
+  //function counting down the timer once button is clicked 
+  var timerInterval = setInterval(function(){
+    timer--;
+    timeCount.textContent = timer
+  //error handler to stop count at 0  
+  if(timer <= 0 || increment > 4){
+    clearInterval(timerInterval)
+    endScreen.setAttribute("class", "show")
+    choicesLi.setAttribute("class", "hide")
+    questionTitle.setAttribute("class", "hide")
+    finalScore.textContent = timer
+  }
+  }, 1000)
+  loadQuestions();
   
     
 }) //----- end -----
 
 //loop for creating each answers and questions button
-
-
-console.log(quizQuestions.question1.choices.length)

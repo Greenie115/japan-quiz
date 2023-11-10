@@ -45,31 +45,28 @@
 
 var quizQuestions = {
     question1: {
-        question: "question 1",
-        choices: ["Here", "there", "nowhere"],
+        choices: ["Here", "there", "nowhere", "another choice"],
         answer: "Here"
     },
 
     question2: {
-        question: "question 2",
-        choices: ["Here", "there", "nowhere"],
+        choices: ["choice 2", "there", "nowhere"],
         answer: "Here"
     },
 
     question3: {
-        question: "Questions 3 does...",
-        choices: ["Here", "there", "nowhere"],
+        choices: ["Here", "choice 3", "nowhere"],
         answer: "Here"
     },
 
     question4: {
-        question: "question 4",
-        choices: ["Here", "there", "nowhere"],
+        choices: ["Here", "choice 4", "nowhere"],
         answer: "Here"
     },
 
     question5: {
-        question: "Question 5",
         choices: ["Here", "there", "nowhere"],
         answer: "Here"
     }}
+
+    var questionsArray = ["question 1", "question 2", "question 3", "question 4", "question 5" ]
