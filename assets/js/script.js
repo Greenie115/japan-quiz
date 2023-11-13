@@ -15,8 +15,6 @@ var answerPText = document.getElementById('correct');
 var questionIndex = 0
 // var choicesLength = quizQuestions.question1.choices.length
 
-
-
 // var changeQuestion = questionTitle.textContent = questionTitleValue[increment]
 
 //timer variable to hold starting time
@@ -36,10 +34,7 @@ function loadQuestions() {
 
   }
   )
-
   // for (var i = 0; i < choicesLength; i++) {
-
-
 }
 
 function answerClick(){
@@ -86,8 +81,3 @@ startButton.addEventListener("click", function () {
 
 
 }) //----- end -----
-
-//loop for creating each answers and questions button
-
-
-console.log()
