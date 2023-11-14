@@ -10,10 +10,11 @@ var finalScore = document.getElementById("final-score");
 var hsInitials = document.getElementById("initials");
 var hsButton = document.getElementById("submit");
 var answerPText = document.getElementById('correct');
+var highScoresLiEl = document.getElementById('highscores');
 //---------- end ----------
 
 var questionIndex = 0
-var hughScoreName = hsInitials.value
+var highScoreName = hsInitials.textContent
 // var choicesLength = quizQuestions.question1.choices.length
 
 // var changeQuestion = questionTitle.textContent = questionTitleValue[increment]
@@ -89,5 +90,10 @@ startButton.addEventListener("click", function () {
 
 hsButton.onclick = highscoreBtn
 function highscoreBtn(){
-  window.location.href='highscores.html'
+  hsButton.preventDefault
+  var userName = hsInitials.value
+  var highScoreList = document.createElement('li')
+  highScoreList.textContent = userName
+  // highScoresLiEl.append(highScoreList)
+  console.log(userName, highScoresLiEl)
 }
