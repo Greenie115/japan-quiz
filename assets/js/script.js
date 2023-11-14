@@ -13,12 +13,13 @@ var answerPText = document.getElementById('correct');
 //---------- end ----------
 
 var questionIndex = 0
+var hughScoreName = hsInitials.value
 // var choicesLength = quizQuestions.question1.choices.length
 
 // var changeQuestion = questionTitle.textContent = questionTitleValue[increment]
 
 //timer variable to hold starting time
-var timer = 60;
+var timer = 5;
 //--- end ---
 var currentQuestion = quizQuestions[questionIndex]
 
@@ -81,3 +82,12 @@ startButton.addEventListener("click", function () {
 
 
 }) //----- end -----
+
+// once clicked, hide the end screen and show the highscores screen
+// take the user input initials from the the initials form and add create and li for each highscore
+// use local storage to grab the data from the user input and store it
+
+hsButton.onclick = highscoreBtn
+function highscoreBtn(){
+  window.location.href='highscores.html'
+}
